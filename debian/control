@@ -1,0 +1,24 @@
+Source: spirv-headers
+Section: devel
+Priority: optional
+Maintainer: Brett Johnson <brett@linuxturtle.net>
+Build-Depends: cmake (>= 3.1),
+ debhelper (>=9),
+ python3,
+ quilt
+Standards-Version: 4.1.1
+Homepage: https://github.com/KhronosGroup/SPIRV-Tools
+
+Package: spirv-headers
+Architecture: all
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: machine-readable files for the SPIR-V Registry
+ This package contains machine-readable files for the SPIR-V Registry.
+ This includes:
+ - Header files for various languages.
+ - JSON files describing the grammar for the SPIR-V core instruction
+   set and the extended instruction sets.
+ - The XML registry file.
+ - A tool to build the headers from the JSON grammar.
+ .
+ For more info, see https://github.com/KhronosGroup/SPIRV-Headers

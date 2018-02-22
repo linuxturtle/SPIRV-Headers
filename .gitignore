@@ -1,2 +1,6 @@
 build
 out
+
+# Vim
+[._]*.s[a-w][a-z]
+*~
