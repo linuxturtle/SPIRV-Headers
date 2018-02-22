@@ -6,8 +6,6 @@ goes something like this:
 # git checkout -b d-u
 # git merge -s ours debian-unstable
 # git diff --binary debian-unstable -- debian .gitignore | git apply -R --index
-# debian/get-external.sh
-# git add External
 # dch
 # git commit ...
 # debian/rules gentarball

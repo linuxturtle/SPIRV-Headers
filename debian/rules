@@ -3,6 +3,14 @@
 %:
 	dh $@ --parallel --with quilt --builddirectory=build/
 
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DCMAKE_INSTALL_PREFIX=../debian/tmp/usr
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+	cmake --build build --target install-headers
 
 gentarball: SOURCE=spirv-headers
 gentarball: UV=$(shell dpkg-parsechangelog|awk '/^Version:/ {print $$2}'|sed 's/-.*$$//')
