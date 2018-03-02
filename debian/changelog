@@ -1,0 +1,5 @@
+spirv-headers (0+git20180201.ce3092-1) unstable; urgency=medium
+
+  * Initial release (Closes: #891052)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 02 Mar 2018 14:29:41 +0200
