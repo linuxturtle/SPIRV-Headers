@@ -17,3 +17,5 @@ Description: Machine-readable files for the SPIR-V Registry
   - JSON files describing the grammar for the SPIR-V core instruction
     set and the extended instruction sets.
   - The XML registry file.
+ .
+ For more info, see https://github.com/KhronosGroup/SPIRV-Headers
