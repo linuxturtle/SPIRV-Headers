@@ -1,5 +1,6 @@
-spirv-headers (1.2.66-1) UNRELEASED; urgency=low
+spirv-headers (1.2.66-2) UNRELEASED; urgency=low
 
   * Initial release. Closes: 891052
+  * Add SPIRV symlink so upstream packages will build.
 
- -- Brett Johnson <brett@linuxturtle.net>  Wed, 21 Feb 2018 15:01:04 -0700
+ -- Brett Johnson <brett@linuxturtle.net>  Tue, 19 Jun 2018 16:30:10 -0600
