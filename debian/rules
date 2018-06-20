@@ -11,9 +11,6 @@ override_dh_auto_configure:
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/tmp
 	cmake --build build --target install-headers
-	# Add default "SPIRV" symlink so vulkan validation layers will build
-	cd debian/tmp/usr/include && \
-	(ln -s spirv/unified1 SPIRV)
 
 gentarball: SOURCE=spirv-headers
 gentarball: UV=$(shell dpkg-parsechangelog|awk '/^Version:/ {print $$2}'|sed 's/-.*$$//')
