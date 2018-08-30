@@ -1,9 +1,10 @@
 #!/bin/sh
+# Script to output a version string with the number of commits since the common
+# ancestor appended to the manually hardcoded API version
+API_VERSION="1.3"
 
-UPSTREAM_REMOTE=khronos
-UPSTREAM_BRANCH=master
+# There are no tags, so manually hardcode commit ID where API_VERSION was created.
+COMMON_ANCESTOR="02ffc719aa9f9c1dce5ce05743fb1afe6cbf17ea"
 
-COMMON_ANCESTOR=`git merge-base master $UPSTREAM_REMOTE/$UPSTREAM_BRANCH`
-
-NB_OF_COMMITS=`git log --oneline $COMMON_ANCESTOR | wc -l`
-echo "1.2.$NB_OF_COMMITS"
+NB_OF_COMMITS=`git log --oneline $COMMON_ANCESTOR..upstream-unstable | wc -l`
+echo "$API_VERSION.$NB_OF_COMMITS"
